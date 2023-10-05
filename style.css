@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, blue,red);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container{
+    width: 600px;
+    background-color: wheat;
+    padding: 30px 20px;
+    border-radius: 20px;
+    overflow-wrap: break-word;
+}
+
+.todolist{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 150%;
+    user-select: none;
+}
+
+img{
+    width: 30px;
+    height: 30px;
+}
+
+.inputbox{
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+button{
+    padding: 15px 40px;
+    border-radius: 30px;
+    background-color: rgb(83, 83, 156);
+    color: white;
+    font-size: 120%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+input{
+    flex: 1;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 120%;
+}
+
+@media (max-width: 321px) {
+    input{
+        font-size: 100%;
+        width: 100%;
+        padding: 10px;
+    }
+    button{
+        font-size: 100%;
+        padding: 10px 25px;
+    }
+    
+}
+@media (max-width: 376px) {
+    input{
+        font-size: 100%;
+        width: 100%;
+        padding: 10px;
+    }
+    button{
+        font-size: 100%;
+        padding: 10px 25px;
+    }
+    
+}
+
+ul{
+    margin-bottom: 40px;
+}
+
+ul li{
+    list-style: none;
+    width: 90%;
+    padding: 12px 8px 12px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+ul li::before{
+    /* border: 1px solid black; */
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(image/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 10px;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: rgb(27, 103, 27);
+}
+
+ul li.checked::before{
+    background-image: url(image/checked.png);
+}
+
+span{
+    /* border: 1px solid black; */
+   position: absolute;
+   right: 0px;
+   font-size: 25px;
+   width: 30px;
+   height: 30px;
+   top: 5px;
+   margin-right: -50px;
+   line-height: 30px;
+   text-align: center;
+   border-radius: 50%;
+}
+
+span:hover{
+    background-color: rgb(83, 83, 156); 
+    color: white;
+    transition: .5s;
+}
